@@ -104,7 +104,7 @@
           >
             <div
               class="one-third order-md-last img js-fullheight"
-              style="background-image:url(images/img/springroll.jpg);"
+              style="background-image:url(images/img/springroll.jpg);" id = "holiday1"
             >
               <div class="overlay"></div>
             </div>
@@ -113,7 +113,7 @@
               data-scrollax=" properties: { translateY: '70%' }"
             >
               <div class="text mt-md-5">
-                <h1 class="mb-4">
+                <h1 class="mb-4" id="holiday-text-1">
                   Eat Healthy <br />
                 </h1>
                 <p>
@@ -166,7 +166,7 @@
           >
             <div
               class="one-third order-md-last img js-fullheight"
-              style="background-image:url(images/Bun-Thit-Nuong-1-of-3.jpg);"
+              style="background-image:url(images/Bun-Thit-Nuong-1-of-3.jpg);" id = "holiday2"
             >
               <div class="overlay"></div>
             </div>
@@ -175,7 +175,7 @@
               data-scrollax=" properties: { translateY: '70%' }"
             >
               <div class="text mt-md-5">
-                <h1 class="mb-4">
+                <h1 class="mb-4" id="holiday-text-2">
                   We Love <br />
                   Delicious Foods
                 </h1>
@@ -614,6 +614,7 @@
                 class="card-img-top img-fluid"
                 style="height:300px"
                 src="images/menu/Pho-Ga-Hanoi-Vietnamese-Chicken-Noodle-Soup.jpg"
+                id = "holiday3"
               />
               <!-- <h3 class="text-white" id="promotion-text">
                 Free Delivery For Order Over 30 CAD
@@ -713,6 +714,34 @@
       </svg>
     </div>
 
+    <!--Change theme during Christmas and New Year-->
+    <script>
+        function changeTheme() {
+            var today = new Date();
+            var currentMonth = today.getMonth()
+           
+           if(currentMonth === 11){
+             var element = document.getElementById('holiday1')
+             element.style.backgroundImage = "url(images/christmas2.jpg)";
+             element = document.getElementById('holiday2')
+             element.style.backgroundImage = "url(images/happy.jpg)";
+             element = document.getElementById('holiday3')
+             element.src = "images/christmas.jpg";
+             element = document.getElementById('holiday-text-1')
+             element.textContent = "Merry Christmas!"
+             element = document.getElementById('holiday-text-2')
+             element.textContent = "Happy New Year!"
+           }
+            var src;
+            // if (object.getDate() >= 24 && object.getMonth() == 12) {
+            //     src = "images/christmas.jpg";
+            // }
+            // img.src = src;
+        }
+        changeTheme()
+     </script>
+
+
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -727,8 +756,8 @@
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
+  
+   
     <script src="js/main.js"></script>
   </body>
 </html>
